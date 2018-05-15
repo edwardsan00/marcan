@@ -1,0 +1,157 @@
+.staff-container{
+    padding-bottom: 50px;
+    background-color: $yellow;
+    @include desde(lg){
+        height: 600px;
+    }  
+}
+.staff{
+    @include desde(lg){
+        display: flex;
+        height: 100%;
+    //    justify-content: space-between;
+    }
+    &__cont-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include desde(lg){
+            flex-wrap: wrap;
+            flex: 220px 0 0;
+            justify-content: flex-start;
+        }
+        .flecha-izquierda{
+            margin-right: 20px;
+             font-size: 20px;
+            color: $gray-300;
+            cursor: pointer;
+            padding: .5em;
+            &:hover{
+                color: $gray;
+            }
+            @include desde(lg){
+                flex: auto 0 0;
+                order: 1;
+                display: flex;
+                justify-content: center;
+                margin-top: -300px;
+                padding: 1em 1em 1em 0;
+                margin-right: 0;
+            }
+        }
+        .flecha-derecha{
+            margin-left: 20px;
+            font-size: 20px;
+            color: $gray-300;
+            cursor: pointer;
+            padding: .5em;
+            &:hover{
+                color: $gray;
+            }
+            @include desde(lg){
+                flex: auto 0 0;
+                order: 1;
+                display: flex; 
+                justify-content: center;
+                margin-top: -300px;
+                padding: 1em;
+                margin-left: 0px;
+            }
+        }
+    }
+    &__title{
+        font-size: 30px;
+        font-family: $NovaBold;
+        color: $gray;
+        text-align: center;
+        @include desde(sm){
+            font-size: 40px;
+        }
+        @include desde(lg){
+            text-align: left;
+            order: 0;
+            flex: 100% 0 0;
+        }
+    }
+    &__cont-obtenidos{
+        display: flex;
+        justify-content: center;
+        @include desde(lg){
+            margin-left: 20px;
+            justify-content: flex-end;
+            align-items: center;
+            flex: auto 1 0;
+        }
+    }
+    &__list{
+        width: 366px;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        @include desde(sm){
+            flex: 760px 0 0;
+            justify-content: flex-start;
+        }
+        @include desde(md){
+            flex: 900px 0 0;
+        }
+        @include desde(lg){
+            margin-top: 120px;
+            flex: 950px 0 0;
+        }
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        flex: 366px 0 0;
+       // height: 490px;
+        margin-right: 20px;
+        background-color: #fff;
+        @include desde(md){
+            flex: 300px 0 0;
+        }
+    }
+    &__cont-img{
+        width: 100%;
+        height: 290px;
+    }
+    &__img{
+        width: 100%;
+    }
+    &__contenido{
+        margin-top:30px;
+        //background-color: red;
+        padding-bottom: 20px;
+        @include desde(md){
+            margin-top: 0;
+        }
+    }
+    &__titulo{
+        font-size: 30px;
+        font-family: $NovaSemi;
+        color: $gray;
+        text-align: center;
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    &__descripcion{
+        font-family: $NovaLight;
+        font-size: 19px;
+        color: $gray;
+        line-height: 1.40;
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+        @include desde(md){
+            width: 80%;
+        }
+    }
+    &__link{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        font-size: 30px;
+        color: $gray;
+    }
+}

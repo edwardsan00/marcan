@@ -1,0 +1,281 @@
+.historias-content{
+    background-color: white;
+    position: relative;
+}
+.historias__outflow{
+    @include desde(md){
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 78%;
+        background-color: $gray;
+    }
+}
+.historias{
+    display: flex;
+    position: relative;
+    &__left{
+        width: 100%;
+        height: 1150px;
+        @include desde(sm){
+            height: 850px;
+        }
+        @include desde(md){
+            background-image: img("icono-marcan.png");
+            background-repeat: no-repeat;
+            background-position: center bottom -80px;
+            background-size: contain;
+            height: 500px;
+            max-width: 490px;
+        }
+        @include desde(lg){
+            height: 650px;
+        }
+    }
+    &__title-content{
+        margin-top: 50px;
+    }
+    &__title{
+        font-size: 35px;
+        font-family: $NovaBold;
+        margin: 0;
+        color: $gray;
+        line-height: 1.15;
+        @include desde(xs){
+            font-size: 45px;
+        }
+        @include desde(md){
+            margin-left: 70px;
+        }
+        @include desde(lg){
+            margin-top: 90px;
+            margin-left: 120px;
+        }
+    }
+    &__right{
+        position: absolute;
+        margin-top: 220px;
+        width: 100%;
+        @include desde(md){
+            position: relative;
+            margin: 0;
+        }
+    }
+    &__video-principal-cont{
+        @include desde(md){
+            margin-top: 20px;
+            margin-left: -50px;
+            display: flex;
+            align-items: center;
+        }
+        @include desde(lg){
+            margin-top: 40px;
+            margin-left: -20px;
+        }
+        .historias__video-principal{
+            width: 100%;
+            //max-width: 500px;
+            height: 312px;
+            background: linear-gradient(to bottom, rgba(0,0,0, .3)0%, rgba(0,0,0, .3)100%), img("banners-ava.png");
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            span{
+                font-size: 100px;
+                color: white;
+                position: relative;
+            }
+            &:hover{
+                background: linear-gradient(to bottom, rgba(0,0,0,.1)0%, rgba(0,0,0, .1)100%), img("banners-ava.png");
+                background-position: center;
+                background-size: cover;
+            }
+            @include desde(md){
+                width: 400px;
+                height: 250px;
+            }
+            @include desde(lg){
+                width: 500px;
+                height: 312px;
+            }
+        }
+
+        .historias__desc-video{
+            padding-top: 1em;
+            padding-bottom: .5em;
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 13%;
+                height: 1px;
+                background-color: $gray;
+                @include desde(md){
+                    background-color: white;
+                }
+                @include desde(lg){
+                    height: 1px;
+                    width: 30%;
+                    bottom: -10px;
+                }
+            }
+            @include desde(md){
+                margin-left: 10px;
+            }
+            @include desde(lg){
+                margin-top: 50px;
+            }
+        }
+        .historias__familia{
+            margin: 0;
+            font-size: 19px;
+            font-family: $NovaSemi;
+            color: $gray;
+            @include desde(md){
+                color: white;
+            }
+        }
+        .historias__proyecto{
+            font-size: 16px;
+            font-family: $NovaLight;
+            margin: 0;
+            color: $gray;
+            @include desde(md){
+                color: white;
+            }
+            @include desde(lg){
+                margin-top: 8px;
+            }
+        }
+    }
+    &__list-video{
+        display: flex;
+        flex-direction: column;
+        @include desde(sm){
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @include desde(md){
+            margin-left: -50px;
+            margin-top: 20px;
+        }
+        @include desde(lg){
+            margin-left: -20px;
+            margin-top: 20px;
+        }
+    }
+    &__item-video{
+        margin: 10px 0;
+        background-color: $gray-300;
+        &:nth-child(odd){
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        &:nth-child(even){
+            display: flex;
+        }
+        @include desde(sm){
+            flex: 180px 0 0;
+            background: none;
+            &:nth-child(odd){
+                display: flex;
+                flex-direction: column;
+            }
+            &:nth-child(even){
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        @include desde(md){
+            flex: 150px 0 0;
+        }
+        @include desde(lg){
+            flex: 240px 0 0;
+            margin-right: 10px;
+            &:nth-last-child(1){
+                margin-right: 0;
+            }
+        }
+        .historias__desc-video{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 1em;
+            @include desde(sm){
+                width: 100%;
+                padding: 0;
+            }
+        }
+        .historias__video{
+            width: 50%;
+            height: 150px;
+            background: linear-gradient(to bottom, rgba(0,0,0,.1)0%, rgba(0,0,0, .1)100%), img("casa-03.png");
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            span{
+                font-size: 70px;
+                color: white;
+            }
+            &:hover{
+                background: linear-gradient(to bottom, rgba(0,0,0,.2)0%, rgba(0,0,0, .2)100%), img("casa-03.png");
+                background-position: center;
+                background-size: cover;
+            }
+            @include desde(sm){
+                width: 100%;
+            }
+            @include desde(md){
+                height: 100px;
+            }
+            @include desde(lg){
+                height: 150px;
+            }
+        }
+        .historias__familia{
+            margin: 0;
+            color: $gray-200;
+            font-size: 19px;
+            font-family: $NovaSemi;
+            @include desde(sm){
+                margin-top: 10px;
+                color: $gray;
+            }
+            @include desde(md){
+                font-size: 14px;
+            }
+            @include desde(lg){
+                font-size: 19px;
+                margin-top: 15px;
+            }
+        }
+        .historias__proyecto{
+            margin: 0;
+            color: $gray-200;
+            font-size: 16px;
+            font-family: $NovaLight;
+            margin-top: 10px;
+            @include desde(sm){
+                color: $gray;
+            }
+            @include desde(md){
+                font-size: 12px;
+                margin-top: 3px;
+            }
+            @include desde(lg){
+                font-size: 16px;
+                margin-top: 12px;
+            }
+        }
+    }
+    
+}

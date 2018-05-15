@@ -1,0 +1,257 @@
+.view-options-viviendas{
+    background-color: white;
+    padding-bottom: 2em;
+}
+.view-options-oficinas{
+    background-color: $gray-200;
+    padding-bottom: 2em;
+    & * .view-options__item{
+         &:hover{
+            box-shadow: 0px 0px 8px 2px rgba($black, .1);
+         }
+    }
+    & * .view-options__cont-hab{
+        border-top: solid 1px white;
+        border-bottom: solid 1px white;
+    }
+
+}
+.view-options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & .izquierda, .derecha{
+            padding: .5em;
+            font-size: 24px;
+            color: $gray-300;
+            cursor: pointer;
+            &:hover{
+                color: $gray-100;
+            }
+        }
+        & .izquierda{
+            margin-right: 20px;
+        }
+        & .derecha{
+            margin-left: 20px;
+        }
+    }
+    &__title{
+        font-size: 40px;
+        color: $gray;
+        font-family: $NovaBold;
+    }
+    &__content{
+        width: 100%;
+        padding: 0 3px;
+        overflow: hidden;
+    }
+    &__list{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        width: 290px;
+        margin: 0 auto;
+        overflow: hidden;
+        padding-left: 5px;
+        padding-bottom: 5px;
+        @include desde(sm){
+            width: 580px;
+        }
+        @include desde(md){
+            width: 870px;
+        }
+        @include desde(lg){
+            width: 100%;
+        }
+    }
+    &__item{
+        flex: 280px 0 0;
+        height: 553px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right: 10px;
+        &:nth-last-child(1){
+            margin-right: 0;
+        }
+        &:hover{
+            box-shadow: 0px 0px 8px 5px rgba($gray-100, .8);
+            .view-options__cont-img{
+                position: relative;
+                 &::after{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    cursor: pointer;
+                    background: linear-gradient(to bottom, rgba(0,0,0, .5) 0%, rgba(0,0,0, .5) 100%);
+                }
+            }
+            .view-options__img{
+                position: absolute;
+                top: 0;
+                left: 0;
+               
+            }
+            .view-options__figure-hover{
+                display: flex;
+                position: relative;
+                z-index: 1;
+            }
+            .view-options__condition{
+                display: block;
+                position: relative;
+                z-index: 1;
+            }
+        }
+        @include desde(lg){
+            margin-right: 20px;
+            &:nth-last-child(1){
+                margin-right: 0;
+            }
+        }
+    }
+    &__cont-img{
+        width: 280px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__img{
+        width: 280px;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+    }
+    &__figure-hover{
+        display: none;
+        width: 130px;
+        height: 90px;
+        border: solid 1px white;
+        img{
+            position: relative;
+        }
+    }
+    &__condition{
+        display: none;
+        background-color: $yellow;
+        position: relative;
+        margin-top: 1em;
+    }
+    &__condition-text{
+        text-transform: uppercase;
+        color: $gray;
+        font-size: 13px;
+        font-family: $NovaBold;
+        margin: 0;
+        padding: .5em .8em;
+    }
+    &__cont-description{
+        width: 100%;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5em 0;
+    }
+    &__app{
+        font-size: 19px;
+        font-family: $NovaBold;
+        margin: 0;
+        color: $black;
+    }
+    &__ubc{
+        font-size: 14px;
+        font-family: $NovaLight;
+        margin: 0;
+        margin-top: 6px;
+        color: $black;
+    }
+    &__cont-hab{
+
+        border-top: solid 1px $gray-200;
+        border-bottom: solid 1px $gray-200;
+        padding: .7em .5em;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    &__hab-list{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__hab-item{
+        display: flex;
+        align-items: center;
+        color: $gray-300;
+        font-family: $NovaSemi;
+        .icono{
+            margin-right: 15px;
+            font-size: 22px;
+        }
+        .description{
+            font-size: 13px;
+            display: flex;
+        }
+        .cd2{
+            font-size: 7px;
+            align-self: flex-start;
+        }
+    }
+    &__cont-precio{
+        padding: 1em 0;
+        display: flex;
+        justify-content: center;
+    }
+    &__precio-text{
+        margin: 0;
+        font-size: 13px;
+        font-family: $NovaSemi;
+    }
+    &__precio-bold{
+        font-family: $NovaBold;
+        font-size: 16px;
+        letter-spacing: 0.80px;
+    }
+    &__cont-btn{
+        padding: 1em 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.btn-gray{
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+     background-color: $gray;
+     cursor: pointer;
+     transition: all .15s ease;
+     &:hover{
+         background-color: rgba($gray, .8);
+         transition: all .15s ease;
+     }
+     &__text{
+         color: white;
+         font-size: 13px;
+         text-transform: uppercase;
+     }
+}
+.slick-initialized .slick-slide{
+    display: flex;
+}

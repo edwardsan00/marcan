@@ -1,0 +1,195 @@
+$height: 45px;
+.input-content{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    flex: 260px 1 1;
+    padding: 0 5px;
+    &.textarea{
+        flex: 100%;
+    }
+    &.file{
+        width: 100%;
+    }
+    @include desde(md){
+        flex: 260px 0 0;
+    }
+    @include desde(lg){
+        flex: 330px 0 0; 
+    }
+    @include desde(xl){
+        margin-bottom: 30px;
+    }
+    label{
+        font-family: $NovaBold;
+        color: $gray;
+        font-size: 16px;
+        margin-bottom: 10px;
+        span{
+            color: $yellow;
+        }
+        @include desde(xl){
+            font-size: 18px;
+        }
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="email"]{
+        border:solid 1px $gray-200;
+        height: $height;
+        border-radius: 3px;
+        color: $gray;
+        padding: 2px 10px;
+        font-size: 18px;
+        &:focus{
+            outline: solid 1px $gray-200;
+        }
+        &::placeholder{
+            color: $gray-300;
+        }
+        @include desde(xl){
+            height: 60px;
+        }
+    }
+    textarea{
+        border:solid 1px $gray-200;
+        min-height: 150px;
+        border-radius: 3px;
+        color: $gray;
+        padding: 10px 10px;
+        font-size: 18px;
+        resize: none;
+        &:focus{
+            outline: solid 1px $gray-200;
+        }
+        &::placeholder{
+            color: $gray-300;
+        }
+        @include desde(md){
+            height: 100px;
+        }
+    }
+    input[type="file"]{
+        border:dashed 1px $gray-200;
+        min-height: 150px;
+        border-radius: 3px;
+        color: $gray;
+        padding: 10px 10px;
+        font-size: 18px;
+        resize: none;
+        opacity: 0;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        @include desde(md){
+            height: 100px;
+        }
+    }
+    select{
+        border:solid 1px $gray-200;
+        height: $height;
+        border-radius: 3px;
+        color: $gray;
+        padding: 2px 10px;
+        font-size: 18px; 
+        @include desde(xl){
+            height: 60px;
+        }
+    }
+}
+
+.form-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.campos-obligatorios{
+    color: $gray;
+    span{
+        color: $yellow;
+    }
+}
+.terminos-condiciones{
+    display: flex;
+    margin-top: 30px;
+    input{
+        width: 18px;
+        height: 18px;
+    }
+    .text-terminos{
+        margin: 0;
+        margin-left: 10px;
+        line-height: 1.2;
+        color: $gray;
+        a{
+            font-family: $NovaBold; 
+            color: $gray;
+            text-decoration: underline;
+        }
+    }
+}
+
+input[type="submit"]{
+    margin-top: 30px;
+    width: 180px;
+    background-color: $yellow;
+    color: $black;
+    font-family: $NovaBold;
+    border: none;
+    height: 45px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+    &:hover{
+        background-color: rgba($yellow, .8);
+    }
+    @include desde(md){
+        font-size: 14px;
+    }
+    @include desde(xl){
+        width: 250px;
+        height: 60px;
+        font-size: 16px;
+    }
+}
+
+hr{
+     border-color: rgba($gray-100, .5);
+     border-bottom: 0;
+     margin-top: 40px;
+     margin-bottom: 40px;
+}
+
+.content-file{
+    position: relative;
+}
+.file{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    height: 100%;
+    border: dashed 1px $gray-200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    .icn-img{
+        color: $gray;
+        font-size: 26px;
+    }
+    .text-file{
+        color: $gray;
+        font-family: $NovaSemi;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+}
+
+.linea{
+    width: 100%;
+    height: 1px;
+    border:solid 1px $gray-100;
+    margin: 40px 0;
+}

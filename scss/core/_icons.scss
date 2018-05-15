@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'icons-marcan';
+  src:  url('../assets/icons/icons-marcan.eot?mlq0sy');
+  src:  url('../assets/icons/icons-marcan.eot?mlq0sy#iefix') format('embedded-opentype'),
+    url('../assets/icons/icons-marcan.ttf?mlq0sy') format('truetype'),
+    url('../assets/icons/icons-marcan.woff?mlq0sy') format('woff'),
+    url('../assets/icons/icons-marcan.svg?mlq0sy#icons-marcan') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons-marcan' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-img:before {
+  content: "\e900";
+
+}
+.icon-abajo:before {
+  content: "\e901";
+
+}
+.icon-adjuntar:before {
+  content: "\e902";
+
+}
+.icon-plus:before {
+  content: "\e903";
+
+}
+.icon-calendario:before {
+  content: "\e904";
+
+}
+.icon-call:before {
+  content: "\e905";
+
+}
+.icon-cerrar:before {
+  content: "\e906";
+
+}
+.icon-check:before {
+  content: "\e907";
+
+}
+.icon-derecha:before {
+  content: "\e908";
+
+}
+.icon-arrow-derecha:before {
+  content: "\e909";
+
+}
+.icon-facebook:before {
+  content: "\e90a";
+
+}
+.icon-habitaciones:before {
+  content: "\e90b";
+
+}
+.icon-instagram:before {
+  content: "\e90c";
+  
+}
+.icon-izquierda:before {
+  content: "\e90d";
+
+}
+.icon-arrow-izquierda:before {
+  content: "\e90e";
+
+}
+.icon-linkedin:before {
+  content: "\e90f";
+
+}
+.icon-lupa:before {
+  content: "\e910";
+
+}
+.icon-mensaje:before {
+  content: "\e911";
+  
+}
+.icon-metraje:before {
+  content: "\e912";
+ 
+}
+.icon-mouse:before {
+  content: "\e913";
+  
+}
+.icon-pdf:before {
+  content: "\e914";
+ 
+}
+.icon-play:before {
+  content: "\e915";
+
+}
+.icon-ubicacion:before {
+  content: "\e916";
+  
+}
+.icon-youtube:before {
+  content: "\e917";
+
+}
+.icon-share:before {
+  content: "\e918";
+
+}

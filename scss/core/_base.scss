@@ -1,0 +1,27 @@
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $NovaLight;
+  position: relative;
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+ul{
+  padding-left: 0;
+  list-style: none;
+}
+

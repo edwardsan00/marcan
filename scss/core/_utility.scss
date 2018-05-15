@@ -1,0 +1,50 @@
+@keyframes fade-in {
+  0%{
+    filter: blur(30px);
+    opacity: 0;
+  }
+  90%{
+    opacity: .8;
+    filter: blur(100px);
+  }
+  100%{
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+@keyframes fade-out {
+  0%{
+    filter: blur(0px);
+    opacity: 1;
+  }
+  20%{
+    opacity: .5;
+    filter: blur(100px);
+  }
+  100%{
+    opacity: 0;
+    filter: blur(0px);
+  }
+}
+
+
+
+.fade-in{
+  animation: fade-in 10s ease;
+}
+.overflow{
+  overflow: hidden;
+}
+
+.text-gray{
+  color: white;
+  font-size: 16px;
+}
+.btn-extra{
+  cursor: pointer;
+  background-color: $yellow;
+  &:hover{
+    background-color: lighten($yellow, 8);
+  }
+}

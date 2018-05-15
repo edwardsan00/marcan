@@ -1,0 +1,29 @@
+.banner{
+    margin-top: 70px;
+    height: 350px;
+    background: linear-gradient(to bottom, rgba(29,29,27,0.7) 0%, rgba(29,29,27,0.34) 51%, rgba(29,29,27,0) 100%), img("banners-ava.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include desde(lg){
+        height: 500px;
+    }
+    &__cont-premiado{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__img{
+        width: 150px;
+    }
+    &__title{
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        font-family: $NovaSemi;
+        line-height: 1.29;
+    }
+}

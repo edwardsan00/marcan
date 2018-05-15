@@ -1,0 +1,177 @@
+.wrap_location{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.location{
+	max-width: 1065px;
+	width: 93%;
+	margin: auto;
+	padding: 96px 0px 83px 0px;
+}
+.loca_main{
+	display: flex;
+	justify-content: flex-start;
+	position: relative;
+	z-index: 30;
+}
+.loca_itm{
+	max-width: 395px;
+	width: 100%;
+	padding-right: 67px;
+	padding-top: 28px;
+	box-sizing: border-box;
+}
+.loca_right_img, .loca_left_img{
+	position: absolute;
+	width: 504px;
+	opacity: .5;
+	img{
+		width: 100%;
+		height: auto;
+		display: block;
+  }
+}
+.loca_right_img{
+	right: -122px;
+	top: -127px;
+}
+.loca_left_img{
+	left: -100px;
+	bottom: -127px;
+}
+.loca_ubication{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	padding-top: 40px;
+}
+.loca_img{
+	width: 100px;
+	margin: 0;
+	margin-right: 4%;
+	margin-bottom: 4%;
+	padding: 20px 5px;
+	box-sizing: border-box;
+	border: 1px solid #E6E6E6;
+	cursor: pointer;
+	transition: all .3s linear;
+	&:nth-child(3n+3){
+		margin-right: 0;
+  }
+	@media screen and (min-width: 1024px){
+		&:hover, &.active{
+			background: $yellow;
+    }
+  }
+}
+.loca_img_inner{
+	width: 30px;
+	margin: auto;
+	img{
+		width: 100%;
+		height: auto;
+		display: block;
+  }
+}
+.loca_text{
+	font-size: 12px;
+	font-family: arial;
+	color: $gray;
+	display: block;
+	text-align: center;
+	padding-top: 10px;
+}
+.loca_map{
+	max-width: 679px;
+	width: 100%;
+	height: 450px;
+	border: 2px solid #E0E0E0;
+	box-sizing: border-box;
+	position: relative;
+}
+.map_class{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.close_map{
+	// display: none;
+	position: absolute;
+	top: 0;
+	right: 20px;
+	background: $yellow;
+	color: #fff;
+	height: 40px;
+	line-height: 40px;
+	padding: 0px 20px;
+	font-size: 14px;
+	z-index: 300;
+	display: none;
+	cursor: pointer;
+	margin-top: 10px;
+}
+@media screen and (max-width: 1300px){
+	.loca_right_img, .loca_left_img{
+		display: none;
+  }
+}
+@media screen and (max-width: 1024px){
+	.location{
+		padding: 50px 0px;
+  }
+}
+@media screen and (max-width: 960px){
+	.wrap_location{
+		&.active{
+			z-index: 9000;
+    }
+  }
+	.loca_ubication{
+		justify-content: center;
+  }
+	.loca_itm{
+		max-width: inherit;
+		width: 100%;
+		padding-right: 0;
+		.title__general--left{
+			text-align: center;
+    }
+  }
+	.loca_img{
+		margin-left: 2%;
+		margin-right: 2%;
+  }
+	.loca_img:nth-child(3n+3){
+		margin-right: 2%;
+		margin-left: 2%;
+  }
+	.close_map{
+		display: block;
+  }
+	.loca_map{
+		position: fixed;
+		width: 100%;
+		max-width: inherit;
+		height: 100%;
+		top: -120%;
+		left: 0;
+		transition: all .4s ease;
+		z-index: 600;
+		&.active{
+			top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 640px){
+	.location{
+		padding: 40px 0px;
+  }
+
+	.loca_itm{
+		padding-top: 0;
+  }
+}

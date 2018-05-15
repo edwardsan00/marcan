@@ -1,0 +1,156 @@
+.phone-fixed{
+    display: none;
+    position: fixed;
+    z-index: 900;
+    right: 20px;
+    //top: 120px;
+    bottom: 20px;
+    align-items: center;
+    &.active{
+        display: flex;
+        animation: fade-in 1s ease;
+    }
+    &.margin-20{
+      @include desde(sm){
+          top: 190px;
+      }
+    }
+    @include desde(sm){
+        top: 120px;
+        align-items: flex-start;
+    }
+    @include desde(xl){
+        right: 50px;
+        height: 90px;
+    }
+    &__phone{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: $yellow;
+        padding: .5em 1em;
+        border-radius: 3px;
+        margin-right: 20px;
+        position: relative;
+        margin-top: 8px;
+        &.active{
+            display: flex;
+        }
+        &:before{
+            content: "";
+            position: absolute;
+            right: -15px;
+            top: 10;
+            border-bottom: 8px solid  transparent;
+            border-top: 8px solid transparent;
+            border-left: 8px solid $yellow;
+            border-right: 8px solid transparent;
+            @include desde(xl){
+                border-bottom: 12px solid  transparent;
+                border-top: 12px solid transparent;
+                border-left: 12px solid $yellow;
+                border-right: 12px solid transparent;
+                right: -23px;
+            }
+        }
+        @include desde(xl){
+            width: 200px;
+            height: 50px;
+            margin-top: 5px;
+            margin-right: 30px;
+        }
+    }
+    &__phone-text{
+        margin: 0;
+        font-size: 12px;
+        font-family: $NovaBold;
+        color: $gray;
+        @include desde(xl){
+            font-size: 15px;
+        }
+    }
+    &__circle{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: $yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        z-index: 10;
+        span{
+            font-family: $NovaBold;
+            font-size: 20px;
+        }
+        @include desde(xl){
+            width: 60px;
+            height: 60px;
+            span{
+                font-size: 25px;
+            }
+        }
+    }
+}
+@keyframes gota {
+  0% {
+    opacity: 1; }
+  20% {
+    opacity: .2; }
+  40% {
+    opacity: .4; }
+  60% {
+    opacity: .6; }
+  80% {
+    opacity: .8; }
+  100% {
+    opacity: 1; }
+}
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.gota1{
+    position: absolute;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    right: -5px;
+    z-index: 3;
+    background-color: rgba($yellow,.5);
+    animation: gota 1s infinite  ease;
+    @include desde(sm){
+        top: -5px;
+    }
+    @include desde(xl){
+        width: 70px;
+        height: 70px;
+        right: -5px;
+        top: -5px;
+    }
+}
+.gota2{
+    position: absolute;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    right: -10px;
+    z-index: 3;
+    background-color: rgba($yellow,.5);
+    animation: gota 1s infinite  ease;
+    @include desde(sm){
+        top: -10px;
+    }
+    @include desde(xl){
+        width: 80px;
+        height: 80px;
+        right: -10px;
+        top: -10px;
+    }
+}

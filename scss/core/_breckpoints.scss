@@ -1,0 +1,43 @@
+$breakpoints: (
+    xs: 480px,
+    sm: 721px,
+    md: 990px,
+    lg: 1201px,
+    xl: 1440px,
+);
+
+@mixin desde($medida){
+    @if map-has-key($breakpoints, $medida){
+        @media screen and (min-width: map-get($breakpoints, $medida)){
+            @content;
+        }
+    } @else  {
+        @media screen and (min-width: $medida){
+            @content;
+        }
+    }
+}
+
+@mixin hasta($medida){
+    @if map-has-key($breakpoints, $medida){
+        @media screen and (max-width: map-get($breakpoints, $medida)){
+            @content;
+        }
+    } @else  {
+        @media screen and (max-width: $medida){
+            @content;
+        }
+    }
+}
+
+@mixin desde-hasta($desde, $hasta){
+    @if map-has-key($breakpoints, $desde) && map-has-key($breakpoints, $hasta) {
+        @media screen and (min-width: map-get($breakpoints, $desde)) and (max-width: map-get($breakpoints, $hasta)){
+            @content;
+        }
+    } @else  {
+        @media screen and (min-width: $medida) and (max-width: $medida){
+            @content;
+        }
+    }
+}

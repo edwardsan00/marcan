@@ -1,0 +1,40 @@
+.error{
+  height: calc(100vh - 70px );
+  position: relative;
+  margin-top: 70px;
+  background-position: center;
+  background-size: cover;
+  &:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: .4);
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    h1{
+      color: $yellow;
+      font-family: $NovaBold;
+      font-size: 90px;
+      margin: 0;
+    }
+    &__text{
+      color: #fff;
+      font-size: 36px;
+      @include hasta(xs){
+        font-size: 28px;
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+.cotizar-container{
+    margin-top:70px;
+    background-color: $gray-200;
+    min-height: 600px;
+}
+
+.cotizar{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &__title{
+        color: $gray;
+        font-family: $NovaSemi;
+        margin-bottom: 50px;
+        @include desde(md){
+            font-size: 35px;
+        }
+        @include desde(xl){
+            font-size: 46px;
+            line-height: 1.3;
+        }
+    }
+    &__cont{
+        display: flex;
+    }
+    &__left{
+        width: 100%;
+        @include desde(md){
+            width: 60%;
+        }
+        @include desde(lg){
+            width: 50%;
+        }
+        @include desde(xl){
+            width: 60%;
+        }
+    }
+    &__box{
+        background-color: #fff;
+        box-shadow: 0px 2px 8px 2px rgba($black, .1);
+        padding: 30px;
+        @include desde(sm){
+            padding: 50px;
+        }
+        @include desde(md){
+            & * .input-content{
+                flex: 200px 1 1;
+            }
+            @include desde(xl){
+                & * .input-content{
+                    flex: 300px 1 1;
+                    &.email{
+                        flex: 50% 0 0;
+                    }
+                }
+            }
+        }
+        
+    }
+    &__row{
+        display: flex;
+        flex-wrap: wrap;
+        &.textarea{
+            width: 100%;
+        }
+    }
+    &__right{
+        display: none;
+        @include desde(md){
+            display: flex;
+            width: 40%;
+            background-image: img("llave.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        @include desde(lg){
+            width: 50%;
+            background-position: 100px;
+        }
+        @include desde(xl){
+            width: 40%;
+        }
+    }
+}

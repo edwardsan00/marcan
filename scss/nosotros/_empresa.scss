@@ -1,0 +1,170 @@
+.empresa-container{
+     background-color: $gray-100;
+     padding-bottom: 20px;
+    @include desde(md){
+        height: 400px;
+        padding-bottom: 0;
+    }  
+}
+.empresa{
+    @include desde(lg){
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+    }
+    &__cont-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include desde(lg){
+            flex-wrap: wrap;
+            width: 220px;
+            justify-content: flex-start;
+        }
+        .flecha-izquierda{
+            margin-right: 20px;
+             font-size: 20px;
+            color: $gray-300;
+            cursor: pointer;
+            padding: .5em;
+            &:hover{
+                color: $gray;
+            }
+            @include desde(lg){
+                flex: auto 0 0;
+                order: 1;
+                display: flex;
+                justify-content: center;
+                margin-top: -170px;
+                padding: 1em 1em 1em 0;
+                margin-right: 0;
+            }
+        }
+        .flecha-derecha{
+            margin-left: 20px;
+            font-size: 20px;
+            color: $gray-300;
+            cursor: pointer;
+            padding: .5em;
+            &:hover{
+                color: $gray;
+            }
+            @include desde(lg){
+                flex: auto 0 0;
+                order: 1;
+                display: flex; 
+                justify-content: center;
+                margin-top: -170px;
+                padding: 1em;
+                margin-left: 0px;
+            }
+        }
+    }
+    &__title{
+        font-size: 30px;
+        font-family: $NovaBold;
+        color: $gray;
+        @include desde(lg){
+            font-size: 40px;
+            order: 0;
+            flex: 100% 0 0;
+        }
+    }
+    &__premiadas{
+        @include desde(md){
+           overflow: hidden;
+        }
+        @include desde(lg){
+            // display: flex;
+            // align-items: center;
+            padding: 0 1em;
+            // width: 970px;
+        }
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        @include desde(md){
+            flex-direction: row;
+        }
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        padding: 1.25em;
+        margin-bottom: 10px;
+        background-color: white;
+        width: 470px;
+        margin: 0px 5px;
+        &:hover{
+            box-shadow: 0px 2px 8px 2px rgba($black, .1);
+            .empresa__link{
+                color: $gray;
+            }
+        }
+        @include desde(sm){
+            flex-direction: row;
+            height: 240px;
+        }
+        @include desde(md){
+            flex: 50% 0 0;
+            margin-bottom: 0;
+            margin-left: 10px;
+            &:nth-child(1){
+                margin-left: 0;
+            }
+        }
+        @include desde(lg){
+            flex: 470px 0 0;
+        }
+    }
+    &__cont-img{
+        align-self: center;
+        @include desde(sm){
+            align-self: flex-start;
+            margin-left: 20px;
+            flex: 100px 1 0;
+        }
+    }
+    &__img{
+        width: 150px;
+        @include desde(sm){
+            // width: auto;
+        }
+    }
+    &__contenido{
+        margin-left: 40px;
+        flex: auto 1 1;
+        @include desde(sm){
+            padding-right: 2em;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: space-between;
+        }
+    }
+    &__principal{
+
+    }
+    &__titulo{
+        font-size: 17px;
+        font-family: $NovaSemi;
+        color: $gray;
+    }
+    &__descripcion{
+        font-size: 14px;
+        font-family: $NovaLight;
+        color: $gray;
+        text-align: justify;
+    }
+    &__link{
+        display: block;
+        font-size: 14px;
+        font-family: $NovaBold;
+        text-transform: uppercase;
+        color: $gray-300;
+        margin-bottom: 0;
+    }
+}

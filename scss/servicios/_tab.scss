@@ -1,0 +1,83 @@
+.tab{
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 2px 5px 1px rgba(0,0,0, .2);
+    margin-top: -70px;
+    position: relative;
+    z-index: 1;
+    @include desde(sm){
+        margin-top: -50px;
+    }
+    @include desde(md){
+        width: 900px;
+        margin: 0 auto;
+        margin-top: -40px;
+    }
+    @include desde(lg){
+        margin-top: -50px;
+    }
+    @include desde(xl){
+        width: 1100px;
+        margin-top: -55px;
+    }
+    &.entregados{
+        @include desde(sm){
+            width: 50%;
+        }
+    }
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 1em;
+    }
+    &__item{
+        flex: 50% 1 1;
+        padding: 0 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        @include desde(sm){
+            flex: 25%;
+        }
+    }
+    &__text{
+        margin: 0;
+        text-align: center;
+        color: $gray;
+        font-family: $NovaSemi;
+        padding: 1em 0;
+        border-bottom: solid 2px white;
+        &:hover{
+            border-bottom: solid 2px $yellow;
+        }
+        &.active{
+             border-bottom: solid 2px $yellow;
+        }
+        @include desde(lg){
+            padding: 1.5em 0;
+        }
+        @include desde(xl){
+            font-size: 20px;
+            padding: 1.5em 0;
+        }
+    }
+}
+
+.servicios-content{
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    @include desde(sm){
+        width: 80%;
+        margin: 0 auto;
+    }
+    @include desde(md){
+        width: 800px;
+    }
+    @include desde(xl){
+        width: 1000px;
+    }
+}
+

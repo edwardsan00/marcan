@@ -1,0 +1,59 @@
+.colaboradores-content{
+    height: 285px;
+    background-color: $gray;
+}
+.colaboradores{
+    display: flex;
+    &__left{
+        display: none;
+        width: 33.3%;
+        @include desde(sm){
+            display: block;
+            background-image: img("nosotros.png");
+            background-position: center;
+            background-size: cover;
+        }
+    }
+    &__center{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 285px;
+        justify-content: center;
+        padding: 0 1em 0 3em;
+        @include desde(md){
+            width: 33.3%;
+        }
+        @include desde(lg){
+            padding: 0 1em 0 6em;
+        }
+    }
+    &__right{
+        display: none;
+        width: 33.3%;
+        @include desde(sm){
+            display: block;
+            background-image: img("nosotros.png");
+            background-position: center;
+            background-size: cover;
+        }
+    }
+    &__cantidad{
+        font-size: 35px;
+        font-family: $NovaLight;
+        margin: 0;
+        color: white;
+        margin-top: -20px;
+    }
+    &__accion{
+        margin: 0;
+        font-size: 22px;
+        font-family: $NovaLight;
+        color: $yellow;
+        margin-top:15px;
+        line-height: 1.3;
+        span{
+            color: white;
+        }
+    }
+}

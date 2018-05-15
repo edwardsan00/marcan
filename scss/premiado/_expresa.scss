@@ -1,0 +1,89 @@
+.expresa-container{
+    background-color: $gray;
+    min-height: 400px;
+}
+.expresa{
+    padding: 30px 0;
+    &__expresa{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include desde(sm){
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+    }
+    &__title{
+        color: $yellow;
+        font-family: $NovaLight;
+        text-transform: uppercase;
+        font-size: 35px;
+        margin-bottom: 0px;
+        margin-top: 0;
+    }
+    &__descripcion{
+        color: white;
+        font-family: $NovaLight;
+        line-height: 1.4;
+        text-align: center;
+        @include desde(md){
+            width: 700px;
+            line-height: 1.6;
+        }
+    }
+    &__cont-destacar{
+        background-color: white;
+        margin-top: 30px;
+        @include desde(md){
+            margin: 0 auto;
+            display: flex;
+            height: 200px;
+            position: relative;
+            margin-top: 40px;
+            width: 80%;
+        }
+        @include desde(lg){
+            width: 1000px;
+        }
+    }
+    &__edificio{
+        display: none;
+        @include desde(md){
+            display: flex;
+            position: absolute;
+            height: 240px;
+            top: -40px;
+            width: 200px;
+            background-image: img("edificio.png");
+            background-size: cover;
+            left: 20px;
+        }
+    }
+    &__descripcion-destacar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1em 2em;
+        @include desde(sm){
+            flex-direction: row;
+        }
+        @include desde(md){
+            margin-left: 220px;
+        }
+    }
+    &__img-destacar{
+        width: 100px;
+    }
+    &__text-destacar{
+        color: $gray-300;
+        text-align: justify;
+        @include desde(sm){
+            margin-left: 20px;
+        }
+        @include desde(md){
+            line-height: 1.4;
+        }
+    }
+}

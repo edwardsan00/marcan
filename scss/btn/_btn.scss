@@ -1,0 +1,20 @@
+/*.btn{
+  display: block;
+  border: none;
+  padding: 0px 25px;
+  border-radius: 3px;
+  height: 50px;
+  &__yellow{
+    background-color: $yellow;
+    &__text{
+      font-size: 14px;
+      color: $gray-100;
+      line-height: 50px;
+      margin: 0;
+      font-family: $NovaBold;
+    }
+    &:hover{
+      background-color: lighten($yellow,10%);
+    }
+  }
+}*/

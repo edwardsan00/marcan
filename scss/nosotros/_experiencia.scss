@@ -1,0 +1,78 @@
+.experiencia-container{
+     background-color: $gray-100;
+     padding-bottom: 20px;
+    @include desde(md){
+        height: 400px;
+        padding-bottom: 0;
+    }  
+}
+.experiencia{
+    @include desde(lg){
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+    }
+    &__cont-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include desde(lg){
+            flex-wrap: wrap;
+            width: 220px;
+            justify-content: flex-start;
+        }
+        .flecha-izquierda{
+            margin-right: 20px;
+             font-size: 20px;
+            color: $gray-300;
+            cursor: pointer;
+            padding: .5em;
+            &:hover{
+                color: $gray;
+            }
+            @include desde(lg){
+                flex: auto 0 0;
+                order: 1;
+                display: flex;
+                justify-content: center;
+                margin-top: -170px;
+                padding: 1em 1em 1em 0;
+                margin-right: 0;
+            }
+        }
+        .flecha-derecha{
+            margin-left: 20px;
+            font-size: 20px;
+            color: $gray-300;
+            cursor: pointer;
+            padding: .5em;
+            &:hover{
+                color: $gray;
+            }
+            @include desde(lg){
+                flex: auto 0 0;
+                order: 1;
+                display: flex; 
+                justify-content: center;
+                margin-top: -170px;
+                padding: 1em;
+                margin-left: 0px;
+            }
+        }
+    }
+    &__title{
+        font-size: 30px;
+        font-family: $NovaBold;
+        color: $gray;
+        @include desde(lg){
+            font-size: 40px;
+            order: 0;
+            flex: 100% 0 0;
+        }
+    }
+
+    &__historias{
+        
+    }
+
+}
