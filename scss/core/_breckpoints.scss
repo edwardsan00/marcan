@@ -31,7 +31,7 @@ $breakpoints: (
 }
 
 @mixin desde-hasta($desde, $hasta){
-    @if map-has-key($breakpoints, $desde) && map-has-key($breakpoints, $hasta) {
+    @if map-has-key($breakpoints, $desde) and map-has-key($breakpoints, $hasta) {
         @media screen and (min-width: map-get($breakpoints, $desde)) and (max-width: map-get($breakpoints, $hasta)){
             @content;
         }
